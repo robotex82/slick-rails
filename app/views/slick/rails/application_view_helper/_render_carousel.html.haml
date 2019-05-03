@@ -1,0 +1,7 @@
+- if options.any?
+  - options_for_js = options.collect { |k,v| "\"#{k.to_s.camelize(:lower)}\": #{v}" }.join(', ')
+  %div{ data: { slick: "{#{options_for_js.html_safe}}" } }
+    = block.call
+- else
+  %div{ data: { slick: true } }
+    = block.call
