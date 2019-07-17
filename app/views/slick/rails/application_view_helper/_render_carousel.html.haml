@@ -1,5 +1,5 @@
 - if options.any?
-  - options_for_js = options.collect { |k,v| "\"#{k.to_s.camelize(:lower)}\": #{v}" }.join(', ')
+  - options_for_js = options.merge(responsive: responsive).collect { |k,v| "\"#{k.to_s.camelize(:lower)}\": #{v}" }.join(', ')
   %div{ data: { slick: "{#{options_for_js.html_safe}}" } }
     = block.call
 - else

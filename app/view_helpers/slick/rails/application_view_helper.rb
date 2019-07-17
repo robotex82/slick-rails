@@ -14,7 +14,9 @@ module Slick
       #     = slick_helper(self).render_carousel()
       #
       def render_carousel(options = {}, &block)
-        render(options: options, block: block)
+        options.reverse_merge!(responsive: {})
+        responsive = options.delete(:responsive)
+        render(options: options, responsive: responsive.to_json, block: block)
       end
     end
   end
