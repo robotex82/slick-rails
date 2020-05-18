@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.version     = Slick::Rails::VERSION
   s.authors     = ["Roberto Vasquez Angel"]
   s.email       = ["roberto@vasquez-angel.de"]
-  s.summary     = "Simple Form fake inputs."
+  s.summary     = "Slick slider integration for rails."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
